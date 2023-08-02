@@ -57,7 +57,7 @@ const CheckoutForm = () => {
       const {
         data: { ClientSecret },
       } = await axios.post(
-        "http://localhost:8888/.netlify/functions/create-payment-intent",
+        "https://modernchairsbygirish.netlify.app/.netlify/functions/create-payment-intent",
         JSON.stringify({ cart, totalprice, shippingfee })
       );
       setClientSecret(ClientSecret);
