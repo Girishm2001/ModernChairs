@@ -28,13 +28,13 @@ const Sidebar = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <Link to={url} onClick={closesidebar}>{text}</Link>
               </li>
             );
           })}
           {myUser && (
             <li key="4">
-              <Link to="/checkout">Checkout</Link>
+              <Link to="/checkout" onClick={closesidebar}>Checkout</Link>
             </li>
           )}
         </ul>
